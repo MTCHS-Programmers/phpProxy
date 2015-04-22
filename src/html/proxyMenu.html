@@ -1,0 +1,12 @@
+<link rel='stylesheet' type='text/css' href='/phpProxy/src/css/proxyMenu.css'>
+<script src='/phpProxy/src/js/loadURL.js' ></script>
+<div id='logBar'>
+		<div id='proxyMenu'>
+			<input value='<?php echo $url; ?>' id='proxyUrl' type='text' onkeyup='if (event.keyCode == 13) loadURL()' placeholder='Warning: Your history will be tracked.' />
+		</div>
+		<p>Signed in as <?php echo $_SESSION['first'] . ' ' . $_SESSION['last']; ?>. 
+			<a href='/profile/login/?t=2&r=<?php echo urlencode($_SERVER['PHP_SELF'] . '?' . $_SERVER['QUERY_STRING']); ?>'>Logout</a>
+			 or 
+			<a href='/profile'>View Profile</a>
+		</p>
+</div>
